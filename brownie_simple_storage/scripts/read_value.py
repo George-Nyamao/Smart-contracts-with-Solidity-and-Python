@@ -1,7 +1,10 @@
 from brownie import SimpleStorage, accounts, config
 
 def read_contract():
-    pass
+    simple_storage = SimpleStorage[-1] # Always get the latest
+    # ABI
+    # Address
+    print(simple_storage.retrieve())
 
 def main():
     read_contract()
